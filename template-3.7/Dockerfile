@@ -1,4 +1,4 @@
-FROM oryxprod/${PYTHON_IMAGE_TAG}
+FROM oryxprod/python-3.7:20190401.5
 LABEL maintainer="appsvc-images@microsoft.com"
 
 # Web Site Home
@@ -7,7 +7,6 @@ ENV HOME_SITE "/home/site/wwwroot"
 #Install system dependencies
 RUN apt-get update \
     && apt-get install -y --no-install-recommends \
-        libpq-dev \
         openssh-server \
         vim \
         curl \
@@ -22,6 +21,9 @@ RUN apt-get update \
 WORKDIR ${HOME_SITE}
 
 EXPOSE 8000
+ENV PORT 8000
+ENV SSH_PORT 2222
+
 # setup SSH
 RUN mkdir -p /home/LogFiles \
      && echo "root:Docker!" | chpasswd \
