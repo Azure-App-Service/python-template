@@ -1,0 +1,38 @@
+[
+    {
+        "stack": "python",
+        "version": "2.7",
+        "baseImageName": "mcr.microsoft.com/oryx/python:2.7-20190516.1",
+        "templateRepoURL": "https://github.com/Azure-App-Service/python-template.git",
+        "templateRepoBranchName": "dev",
+        "outputImageName": "python:dev-2.7",
+        "outputRepoURL": "https://github.com/blessedimagepipeline/python-2.7.git",
+        "outputRepoBranchName": "dev",
+        "webAppName": "appsvcbuild-python-2-7-dev",
+        "saveArtifacts": true
+    },
+    {
+        "stack": "python",
+        "version": "3.6",
+        "baseImageName": "mcr.microsoft.com/oryx/python:2.7-20190516.1",
+        "templateRepoURL": "https://github.com/Azure-App-Service/python-template.git",
+        "templateRepoBranchName": "dev",
+        "outputImageName": "python:dev-3.6",
+        "outputRepoURL": "https://github.com/blessedimagepipeline/python-3.6.git",
+        "outputRepoBranchName": "dev",
+        "webAppName": "appsvcbuild-python-3-6-dev",
+        "saveArtifacts": true
+    },
+    {
+        "stack": "python",
+        "version": "3.7",
+        "baseImageName": "mcr.microsoft.com/oryx/python:3.7-20190516.1",
+        "templateRepoURL": "https://github.com/Azure-App-Service/python-template.git",
+        "templateRepoBranchName": "dev",
+        "outputImageName": "python:dev-3.7",
+        "outputRepoURL": "https://github.com/blessedimagepipeline/python-3.7.git",
+        "outputRepoBranchName": "dev",
+        "webAppName": "appsvcbuild-python-3-7-dev",
+        "saveArtifacts": true
+    }
+]
