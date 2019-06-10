@@ -1,6 +1,6 @@
 FROM ${TAG}
 LABEL maintainer="appsvc-images@microsoft.com"
-
+fail
 # Web Site Home
 ENV HOME_SITE "/home/site/wwwroot"
 
