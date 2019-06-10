@@ -6,7 +6,8 @@
         "templateRepoURL": "https://github.com/Azure-App-Service/python-template.git",
         "templateRepoBranchName": "dev",
         "outputImageName": "python:dev-2.7",
-        "saveArtifacts": false
+        "saveArtifacts": false,
+        "useCache": true
     },
     {
         "stack": "python",
@@ -15,7 +16,8 @@
         "templateRepoURL": "https://github.com/Azure-App-Service/python-template.git",
         "templateRepoBranchName": "dev",
         "outputImageName": "python:dev-3.6",
-        "saveArtifacts": false
+        "saveArtifacts": false,
+        "useCache": true
     },
     {
         "stack": "python",
@@ -23,6 +25,7 @@
         "baseImageName": "mcr.microsoft.com/oryx/python:3.7-20190516.1",
         "templateRepoURL": "https://github.com/Azure-App-Service/python-template.git",
         "templateRepoBranchName": "dev",
-        "saveArtifacts": false
+        "saveArtifacts": false,
+        "useCache": true
     }
 ]
