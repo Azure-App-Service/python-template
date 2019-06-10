@@ -1,6 +1,8 @@
 FROM ${TAG}
 LABEL maintainer="appsvc-images@microsoft.com"
 
+RUN echo "pass"
+
 # Web Site Home
 ENV HOME_SITE "/home/site/wwwroot"
 
