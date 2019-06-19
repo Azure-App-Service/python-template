@@ -8,7 +8,7 @@
         "outputImageName": "python:dev-2.7",
         "outputRepoURL": "https://github.com/blessedimagepipeline/python-2.7.git",
         "outputRepoBranchName": "dev",
-        "webAppName": "appsvcbuild-python-2-7-dev",
+        "webAppName": "blimp-python-2-7-dev",
         "saveArtifacts": true,
         "useCache": true
     },
@@ -21,7 +21,7 @@
         "outputImageName": "python:dev-3.6",
         "outputRepoURL": "https://github.com/blessedimagepipeline/python-3.6.git",
         "outputRepoBranchName": "dev",
-        "webAppName": "appsvcbuild-python-3-6-dev",
+        "webAppName": "blimp-python-3-6-dev",
         "saveArtifacts": true,
         "useCache": true
     },
@@ -34,7 +34,7 @@
         "outputImageName": "python:dev-3.7",
         "outputRepoURL": "https://github.com/blessedimagepipeline/python-3.7.git",
         "outputRepoBranchName": "dev",
-        "webAppName": "appsvcbuild-python-3-7-dev",
+        "webAppName": "blimp-python-3-7-dev",
         "saveArtifacts": true,
         "useCache": true
     }

@@ -26,7 +26,7 @@ def appendOutputRepo(buildRequest, pullRepo, pullId):
 
 
 def triggerBuild(buildRequests, code):
-    url = "https://appsvcbuildfunc-test.azurewebsites.net/api/HttpBuildPipeline_HttpStart"
+    url = "https://blimpfunc.azurewebsites.net/api/HttpBuildPipeline_HttpStart"
     querystring = {"code": code}
     payload = json.dumps(buildRequests)
     headers = {
@@ -34,6 +34,7 @@ def triggerBuild(buildRequests, code):
         'cache-control': "no-cache"
         }
     response = requests.request("POST", url, data=payload, headers=headers, params=querystring)
+    print(response.content.decode('utf-8'))
     return json.loads(response.content.decode('utf-8'), strict=False)
 
 
@@ -47,6 +48,7 @@ def pollPipeline(statusQueryGetUri):
         'cache-control': "no-cache"
         }
     response = requests.request("GET", url, headers=headers)
+    print(response.content.decode('utf-8'))
     return json.loads(response.content.decode('utf-8'), strict=False)
 
 
@@ -65,7 +67,7 @@ def buildImage(br, code, results):
                 content = pollPipeline(statusQueryGetUri)
                 runtimeStatus = content["runtimeStatus"]
                 if runtimeStatus == "Completed":
-                    print(content)
+                    print(content["output"].replace("\\", "/"))
                     output = json.loads(content["output"].replace("\\", "/"), strict=False)
                     status = output["status"]
                     if (status == "success"):

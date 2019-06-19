@@ -8,7 +8,7 @@
         "outputImageName": "python:master-2.7",
         "outputRepoURL": "https://github.com/blessedimagepipeline/python-2.7.git",
         "outputRepoBranchName": "master",
-        "webAppName": "appsvcbuild-python-2-7-master",
+        "webAppName": "blimp-python-2-7-master",
         "saveArtifacts": true,
         "useCache": true
     },
@@ -21,7 +21,7 @@
         "outputImageName": "python:master-3.6",
         "outputRepoURL": "https://github.com/blessedimagepipeline/python-3.6.git",
         "outputRepoBranchName": "master",
-        "webAppName": "appsvcbuild-python-3-6-master",
+        "webAppName": "blimp-python-3-6-master",
         "saveArtifacts": true,
         "useCache": true
     },
@@ -34,7 +34,7 @@
         "outputImageName": "python:master-3.7",
         "outputRepoURL": "https://github.com/blessedimagepipeline/python-3.7.git",
         "outputRepoBranchName": "master",
-        "webAppName": "appsvcbuild-python-3-7-master",
+        "webAppName": "blimp-python-3-7-master",
         "saveArtifacts": true,
         "useCache": true
     }
