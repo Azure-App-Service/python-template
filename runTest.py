@@ -100,7 +100,7 @@ def buildImage(br, code, results, outputMessage):
     else:
         results.append(False)
         outputMessage.append(
-            "Build request Failed on following input: \n" + json.dumps(br) +
+            "Build request Failed on following input: \n" + json.dumps(br) + "\n" +
             "failure message: \n" + content["output"].replace("\\", "/"))
         sys.exit(1)
 
