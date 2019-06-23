@@ -52,7 +52,7 @@ def pollPipeline(statusQueryGetUri):
     return json.loads(response.content.decode('utf-8'), strict=False)
 
 
-def buildImage(br, code, results):
+def buildImage(br, code, results, outputMessage):
     tries = 0
     success = False
     while tries < 1:
@@ -67,6 +67,7 @@ def buildImage(br, code, results):
                 content = pollPipeline(statusQueryGetUri)
                 runtimeStatus = content["runtimeStatus"]
                 if runtimeStatus == "Completed":
+                    print("build completed")
                     print(content["output"].replace("\\", "/"))
                     output = json.loads(content["output"].replace("\\", "/"), strict=False)
                     status = output["status"]
@@ -75,13 +76,13 @@ def buildImage(br, code, results):
                         success = True
                         break
                     else:
-                        print("failed on")
+                        print("failed")
                         break
                 elif runtimeStatus == "Running":
                     print("running")
                     continue
                 else:
-                    print("failed on")
+                    print("failed")
                     break
             if success:
                 break
@@ -93,9 +94,14 @@ def buildImage(br, code, results):
             print(sys.exc_info())
     if success:
         results.append(True)
+        outputMessage.append(
+            "Build request Succeed on following input: \n" + json.dumps(br))
         sys.exit(0)
     else:
         results.append(False)
+        outputMessage.append(
+            "Build request Failed on following input: \n" + json.dumps(br) +
+            "failure message: \n" + content["output"].replace("\\", "/"))
         sys.exit(1)
 
 
@@ -120,11 +126,12 @@ print(pullId)
 
 threads = []
 results = []
+outputMessage = []
 buildRequests = getConfig(config)
 for br in buildRequests:
     br = appendPR(br, pullRepo, pullId)
     print(br)
-    t = threading.Thread(target=buildImage, args=((br, code, results)))
+    t = threading.Thread(target=buildImage, args=((br, code, results, outputMessage)))
     threads.append(t)
     t.start()
     time.sleep(60)
@@ -133,10 +140,23 @@ for br in buildRequests:
 for t in threads:
     t.join()
 
+print("------------------------------------------------------------------------")
+
+withfailures = False
+
 for r in results:
     if r == False:
-        print("Failed")
-        sys.exit(1)
+        withfailures = True
 
-print("Passed")
-sys.exit(0)
+if (withfailures):
+    print("Runs completed with Failures")
+else:
+    print("Runs completed with no Failures")
+
+for msg in outputMessage:
+    print(msg)
+
+if (withfailures):
+    sys.exit(1)
+else:
+    sys.exit(0)
