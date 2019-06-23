@@ -1,0 +1,26 @@
+trigger:
+- dev
+pr:
+  branches:
+    exclude:
+    - '*'
+
+pool:
+  vmImage: 'ubuntu-latest'
+
+steps:
+- script: |
+    if [ -z "$(system.pullRequest.sourceRepositoryUri)" ] 
+    then 
+      python3 runTest.py \
+        --config "blessedImageConfig-dev.json" \
+        --code $(SecretCode)
+    else
+      python3 runTest.py \
+        --config "blessedImageConfig-dev.json" \
+        --code $(SecretCode) \
+        --pullRepo $(system.pullRequest.sourceRepositoryUri) \
+        --pullId $(system.pullRequest.pullRequestNumber)
+    fi
+  timeoutInMinutes: 180
+  displayName: 'Running test'
