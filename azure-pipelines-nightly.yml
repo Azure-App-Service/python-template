@@ -1,0 +1,31 @@
+schedules:
+- cron: "0 0 * * *"
+  displayName: Daily midnight build
+  branches:
+    include:
+    - master
+    - dev
+    exclude:
+    - '*'
+
+jobs:
+- job:
+  pool:
+    vmImage: 'ubuntu-latest'
+  timeoutInMinutes: 360
+  displayName: 'Running test'
+  steps:
+  - bash: |
+      if [ -z "$(system.pullRequest.sourceRepositoryUri)" ]
+      then
+        python3 runTest.py \
+          --config "blessedImageConfig-dev.json" \
+          --code $(SecretCode)
+      else
+        python3 runTest.py \
+          --config "blessedImageConfig-dev.json" \
+          --code $(SecretCode) \
+          --pullRepo $(system.pullRequest.sourceRepositoryUri) \
+          --pullId $(system.pullRequest.pullRequestNumber)
+      fi
+      
