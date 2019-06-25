@@ -27,5 +27,14 @@
         "templateRepoBranchName": "dev",
         "saveArtifacts": false,
         "useCache": true
+    },
+    {
+        "stack": "python",
+        "version": "3.8",
+        "baseImageName": "mcr.microsoft.com/oryx/python:3.8-20190516.1",
+        "templateRepoURL": "https://github.com/Azure-App-Service/python-template.git",
+        "templateRepoBranchName": "dev",
+        "saveArtifacts": false,
+        "useCache": true
     }
 ]

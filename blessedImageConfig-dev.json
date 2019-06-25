@@ -37,5 +37,18 @@
         "webAppName": "blimp-python-3-7-dev",
         "saveArtifacts": true,
         "useCache": true
+    },
+    {
+        "stack": "python",
+        "version": "3.8",
+        "baseImageName": "mcr.microsoft.com/oryx/python:3.8-20190516.1",
+        "templateRepoURL": "https://github.com/Azure-App-Service/python-template.git",
+        "templateRepoBranchName": "dev",
+        "outputImageName": "python:dev-3.8",
+        "outputRepoURL": "https://github.com/blessedimagepipeline/python-3.8.git",
+        "outputRepoBranchName": "dev",
+        "webAppName": "blimp-python-3-8-dev",
+        "saveArtifacts": true,
+        "useCache": true
     }
 ]
