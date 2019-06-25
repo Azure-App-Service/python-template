@@ -19,11 +19,13 @@ jobs:
       then
         python3 runTest.py \
           --config "blessedImageConfig-temp.json" \
-          --code $(SecretCode)
+          --code $env:SECRET_CODE
       else
         python3 runTest.py \
           --config "blessedImageConfig-temp.json" \
-          --code $(SecretCode) \
           --pullRepo $(system.pullRequest.sourceRepositoryUri) \
-          --pullId $(system.pullRequest.pullRequestNumber)
+          --pullId $(system.pullRequest.pullRequestNumber) \
+          --code $env:SECRET_CODE
       fi
+    env: 
+      SECRET_CODE: $(SecretCode)
