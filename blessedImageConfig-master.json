@@ -1,54 +1,54 @@
 [
     {
-        "stack": "python",
-        "version": "2.7",
         "baseImageName": "mcr.microsoft.com/oryx/python:2.7-20190708.2",
-        "templateRepoURL": "https://github.com/Azure-App-Service/python-template.git",
-        "templateRepoBranchName": "master",
         "outputImageName": "python:master-2.7",
+        "outputRepoBranchName": "master",
         "outputRepoURL": "https://github.com/blessedimagepipeline/python-2.7.git",
-        "outputRepoBranchName": "master",
-        "webAppName": "blimp-python-2-7-master",
         "saveArtifacts": true,
-        "useCache": true
+        "stack": "python",
+        "templateRepoBranchName": "master",
+        "templateRepoURL": "https://github.com/Azure-App-Service/python-template.git",
+        "useCache": true,
+        "version": "2.7",
+        "webAppName": "blimp-python-2-7-master"
     },
     {
-        "stack": "python",
-        "version": "3.6",
         "baseImageName": "mcr.microsoft.com/oryx/python:3.6-20190708.2",
-        "templateRepoURL": "https://github.com/Azure-App-Service/python-template.git",
-        "templateRepoBranchName": "master",
         "outputImageName": "python:master-3.6",
+        "outputRepoBranchName": "master",
         "outputRepoURL": "https://github.com/blessedimagepipeline/python-3.6.git",
-        "outputRepoBranchName": "master",
-        "webAppName": "blimp-python-3-6-master",
         "saveArtifacts": true,
-        "useCache": true
+        "stack": "python",
+        "templateRepoBranchName": "master",
+        "templateRepoURL": "https://github.com/Azure-App-Service/python-template.git",
+        "useCache": true,
+        "version": "3.6",
+        "webAppName": "blimp-python-3-6-master"
     },
     {
-        "stack": "python",
-        "version": "3.7",
         "baseImageName": "mcr.microsoft.com/oryx/python:3.7-20190708.2",
-        "templateRepoURL": "https://github.com/Azure-App-Service/python-template.git",
-        "templateRepoBranchName": "master",
         "outputImageName": "python:master-3.7",
-        "outputRepoURL": "https://github.com/blessedimagepipeline/python-3.7.git",
         "outputRepoBranchName": "master",
-        "webAppName": "blimp-python-3-7-master",
+        "outputRepoURL": "https://github.com/blessedimagepipeline/python-3.7.git",
         "saveArtifacts": true,
-        "useCache": true
+        "stack": "python",
+        "templateRepoBranchName": "master",
+        "templateRepoURL": "https://github.com/Azure-App-Service/python-template.git",
+        "useCache": true,
+        "version": "3.7",
+        "webAppName": "blimp-python-3-7-master"
     },
     {
-        "stack": "python",
-        "version": "3.8",
         "baseImageName": "mcr.microsoft.com/oryx/python:3.8-20190708.2",
-        "templateRepoURL": "https://github.com/Azure-App-Service/python-template.git",
-        "templateRepoBranchName": "master",
         "outputImageName": "python:master-3.8",
-        "outputRepoURL": "https://github.com/blessedimagepipeline/python-3.8.git",
         "outputRepoBranchName": "master",
-        "webAppName": "blimp-python-3-8-master",
+        "outputRepoURL": "https://github.com/blessedimagepipeline/python-3.8.git",
         "saveArtifacts": true,
-        "useCache": true
+        "stack": "python",
+        "templateRepoBranchName": "master",
+        "templateRepoURL": "https://github.com/Azure-App-Service/python-template.git",
+        "useCache": true,
+        "version": "3.8",
+        "webAppName": "blimp-python-3-8-master"
     }
 ]
