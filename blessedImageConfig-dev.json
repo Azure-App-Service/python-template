@@ -1,6 +1,6 @@
 [
     {
-        "baseImageName": "mcr.microsoft.com/oryx/python:2.7-20190712.5",
+        "baseImageName": "mcr.microsoft.com/oryx/python:2.7-20190730.1",
         "outputImageName": "python:dev-2.7",
         "outputRepoBranchName": "dev",
         "outputRepoURL": "https://github.com/blessedimagepipeline/python-2.7.git",
@@ -13,7 +13,7 @@
         "webAppName": "blimp-python-2-7-dev"
     },
     {
-        "baseImageName": "mcr.microsoft.com/oryx/python:3.6-20190712.5",
+        "baseImageName": "mcr.microsoft.com/oryx/python:3.6-20190730.1",
         "outputImageName": "python:dev-3.6",
         "outputRepoBranchName": "dev",
         "outputRepoURL": "https://github.com/blessedimagepipeline/python-3.6.git",
@@ -26,7 +26,7 @@
         "webAppName": "blimp-python-3-6-dev"
     },
     {
-        "baseImageName": "mcr.microsoft.com/oryx/python:3.7-20190712.5",
+        "baseImageName": "mcr.microsoft.com/oryx/python:3.7-20190730.1",
         "outputImageName": "python:dev-3.7",
         "outputRepoBranchName": "dev",
         "outputRepoURL": "https://github.com/blessedimagepipeline/python-3.7.git",
@@ -39,7 +39,7 @@
         "webAppName": "blimp-python-3-7-dev"
     },
     {
-        "baseImageName": "mcr.microsoft.com/oryx/python:3.8-20190712.5",
+        "baseImageName": "mcr.microsoft.com/oryx/python:3.8-20190730.1",
         "outputImageName": "python:dev-3.8",
         "outputRepoBranchName": "dev",
         "outputRepoURL": "https://github.com/blessedimagepipeline/python-3.8.git",
