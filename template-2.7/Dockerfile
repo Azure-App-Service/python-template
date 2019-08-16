@@ -13,6 +13,9 @@ RUN apt-get update \
         wget \
 #        build-essential \
         tcptraceroute \
+        net-tools \
+        dnsutils \
+        tcpdump \
     && pip install --upgrade pip \
     && pip install gunicorn \ 
     && pip install virtualenv \
