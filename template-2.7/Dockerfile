@@ -16,6 +16,7 @@ RUN apt-get update \
         net-tools \
         dnsutils \
         tcpdump \
+        iproute2 \
     && pip install --upgrade pip \
     && pip install gunicorn \ 
     && pip install virtualenv \
