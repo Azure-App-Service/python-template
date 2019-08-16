@@ -12,6 +12,9 @@ RUN apt-get update \
         curl \
         wget \
         tcptraceroute \
+        net-tools \
+        dnsutils \
+        tcpdump \
     && pip install --upgrade pip \
     && pip install subprocess32 \
     && pip install gunicorn \ 
