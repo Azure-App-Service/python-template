@@ -32,7 +32,7 @@ ENV SSH_PORT 2222
 RUN mkdir -p /home/LogFiles \
      && echo "root:Docker!" | chpasswd \
      && echo "cd /home" >> /root/.bashrc 
-
+     
 COPY sshd_config /etc/ssh/
 RUN mkdir -p /opt/startup
 COPY init_container.sh /opt/startup/init_container.sh
