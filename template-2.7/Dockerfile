@@ -21,7 +21,8 @@ RUN apt-get update \
     && pip install gunicorn \ 
     && pip install virtualenv \
     && pip install flask \
-    && pip install scandir 
+    && pip install scandir \
+    && pip install mysqlclient 
 
 WORKDIR ${HOME_SITE}
 

@@ -20,7 +20,8 @@ RUN apt-get update \
     && pip install subprocess32 \
     && pip install gunicorn \ 
     && pip install virtualenv \
-    && pip install flask 
+    && pip install flask \
+    && pip install mysqlclient 
 
 WORKDIR ${HOME_SITE}
 
