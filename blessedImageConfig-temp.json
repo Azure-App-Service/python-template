@@ -1,6 +1,6 @@
 [
     {
-        "baseImageName": "mcr.microsoft.com/oryx/python:2.7-20190712.5",
+        "baseImageName": "mcr.microsoft.com/oryx/python:2.7-20190828.1",
         "outputImageName": "python:dev-2.7",
         "saveArtifacts": false,
         "stack": "python",
@@ -10,7 +10,7 @@
         "version": "2.7"
     },
     {
-        "baseImageName": "mcr.microsoft.com/oryx/python:3.6-20190712.5",
+        "baseImageName": "mcr.microsoft.com/oryx/python:3.6-20190828.1",
         "outputImageName": "python:dev-3.6",
         "saveArtifacts": false,
         "stack": "python",
@@ -20,7 +20,7 @@
         "version": "3.6"
     },
     {
-        "baseImageName": "mcr.microsoft.com/oryx/python:3.7-20190712.5",
+        "baseImageName": "mcr.microsoft.com/oryx/python:3.7-20190828.1",
         "saveArtifacts": false,
         "stack": "python",
         "templateRepoBranchName": "dev",
@@ -29,7 +29,7 @@
         "version": "3.7"
     },
     {
-        "baseImageName": "mcr.microsoft.com/oryx/python:3.8-20190712.5",
+        "baseImageName": "mcr.microsoft.com/oryx/python:3.8-20190828.1",
         "saveArtifacts": false,
         "stack": "python",
         "templateRepoBranchName": "dev",

@@ -55,6 +55,7 @@ def pollPipeline(statusQueryGetUri):
 def buildImage(br, code, results, outputMessage):
     tries = 0
     success = False
+    webAppName = ""
     while tries < 1:
         try:
             tries = tries + 1
@@ -70,6 +71,8 @@ def buildImage(br, code, results, outputMessage):
                     print("build completed")
                     print(content["output"].replace("\\", "/"))
                     output = json.loads(content["output"].replace("\\", "/"), strict=False)
+                    webAppName = output["input"]["webAppName"].replace("\\", "/")
+                    print("webAppName: "+ webAppName)
                     status = output["status"]
                     if (status == "success"):
                         print("pass")
@@ -95,7 +98,8 @@ def buildImage(br, code, results, outputMessage):
     if success:
         results.append(True)
         outputMessage.append(
-            "Build request Succeed on following input: \n" + json.dumps(br))
+            "Build request Succeed on following input: \n" + json.dumps(br) + "\n" +
+            "webAppName: " + webAppName)
         sys.exit(0)
     else:
         results.append(False)
