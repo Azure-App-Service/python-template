@@ -40,6 +40,7 @@ COPY init_container.sh /opt/startup/init_container.sh
 # setup default site
 RUN mkdir /opt/defaultsite
 COPY hostingstart.html /opt/defaultsite
+COPY hostingstart_dep.html /opt/defaultsite
 COPY application.py /opt/defaultsite
 
 # configure startup
