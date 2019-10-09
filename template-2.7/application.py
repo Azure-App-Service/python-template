@@ -1,6 +1,10 @@
 from flask import Flask
+import os
 app = Flask(__name__, static_folder='/opt/defaultsite')
 
 @app.route('/')
 def root():
-    return app.send_static_file('hostingstart.html')
+    if len(os.walk('/home/site/deployments')[1]) > 1:
+        return app.send_static_file('hostingstart_dep.html')
+    else:
+        return app.send_static_file('hostingstart.html')
